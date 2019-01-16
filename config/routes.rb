@@ -3,5 +3,11 @@ Rails.application.routes.draw do
 
   get 'about'=> 'pages#about', as: 'about'
 
-  resources :posts
+  resources :posts do
+  	resources :comments
+  end
+
+  #прописываем ссылки к комментариям
+
+
 end
